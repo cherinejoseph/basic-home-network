@@ -32,7 +32,7 @@ This Home Network consists of:
      |             |
  Fa0/1          Fa0/2
   |               |
-[PC1]     [PC2]
+[PC1]           [PC2]
 ```
 
 ### 1. Add Devices
