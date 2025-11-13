@@ -5,7 +5,7 @@ This project focuses on establishing a functional network using a router, switch
 
 This Home Network consists of:
 - 1 x Cisco 1941 router (acting as default gateway + DHCP server)
-- 1 x 2960 switch
+- 1 x 2960 switch (Layer 2 Switch)
 - 2 x PCs receiving IP addresses via DHCP
 
 ## Objectives
@@ -99,6 +99,8 @@ This makes the router:
 - The Layer 3 device for the LAN
 - The anchor of the 192.168.1.0/24 network
 
+**The subnet mask `255.255.255.0` (`/24`) was chosen because it is the standard size for small LANs. It provides 254 usable host addresses, which is ideal for a home network.**
+
 #### 3.2 Configure DHCP on the Router
 Here, I configured the router to hand out IPs automatically.
 
@@ -145,6 +147,8 @@ ping 192.168.1.254
 ```
 <img width="652" height="286" alt="image" src="https://github.com/user-attachments/assets/3955fcf2-e9b0-4dba-a127-549fbf04a4a6" />
 
+**The successful test confirms that the router is reachable, its LAN interface is active, and it is correctly configured as the default gateway.**
+
 ---
 **Test 2 — PC1 → Ping PC2**
 
@@ -153,3 +157,13 @@ ping 192.168.1.2
 ```
 <img width="1698" height="946" alt="image" src="https://github.com/user-attachments/assets/88dccecb-545b-425a-8d83-cbf1253d7c8a" />
 
+**The successful test confirms that devices can communicate with each other through the switch without any issues.**
+
+----
+
+### Addtional Info 
+
+- A Layer 2 switch was used in this home network setup because all devices operate within the same subnet. A Layer 2 switch forwards traffic based on MAC addresses, providing simple, fast, and efficient device-to-device connectivity without requiring any routing features.
+- The subnet mask 255.255.255.0 (/24) was chosen because it is the standard size for small LANs. It provides 254 usable IP addresses, which is more than enough for a home network and keeps addressing simple and easy to manage.
+It was ideal to use this subnet mask for the setup because a `/24` subnet keeps all devices in the same broadcast domain, allowing them to communicate easily without routing. It offers a balance of simplicity and scalability for typical home or small office environments.
+The router handles DHCP because it is already acting as the default gateway for the network. Centralizing DHCP on the router ensures all devices receive consistent IP, gateway, and DNS settings automatically, just like a real home router.
