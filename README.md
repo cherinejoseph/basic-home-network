@@ -30,9 +30,9 @@ This Home Network consists of:
            |
 [Switch (2960)]
      |             |
- Fa0/2          Fa0/3
+ Fa0/1          Fa0/2
   |               |
-[PC-Home1]     [PC-Home2]
+[PC1]     [PC2]
 ```
 
 ### 1. Add Devices
@@ -56,10 +56,6 @@ amber → green
 However, the link between: Router Gi0/0  ↔  Switch Gi0/1, remained RED
 
 <img width="267" height="313" alt="image" src="https://github.com/user-attachments/assets/e2477493-b99c-49ab-8c9c-4a17494ddcf1" />
-
-Initially, the link between: 
-Router GigabitEthernet0/0 → Switch GigabitEthernet0/1
-was RED.
 
 --- 
 
