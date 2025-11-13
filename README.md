@@ -35,3 +35,4 @@ The goal is to understand how a basic routed LAN works: default gateway, DHCP, a
  Fa0/2          Fa0/3
   |               |
 [PC-Home1]     [PC-Home2]
+```
